@@ -11,19 +11,21 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name:  Checkout del código
+      - name: Checkout del código
         uses: actions/checkout@v3
 
-      - name:  Configurar Node.js
+      - name: Configurar Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 18
 
-      - name:  Instalar dependencias
+      - name: Instalar dependencias
         run: npm install
 
-      - name:  Ejecutar pruebas
-        run: npm test
+      - name: Dar permisos y ejecutar pruebas
+        run: |
+          chmod +x ./node_modules/.bin/jest
+          npx jest --runInBand
 
   deploy:
     needs: build
@@ -31,11 +33,13 @@ jobs:
     if: success()
 
     steps:
-      - name:  Checkout del código
+      - name: Checkout del código
         uses: actions/checkout@v3
 
-      - name:  Simular despliegue local
-        run: 
+      - name: Simular despliegue local
+        run: |
           echo "Iniciando despliegue simulado..."
+          echo "Compilando aplicación..."
           echo "Copiando archivos al entorno local (simulación)..."
-          echo "Despliegue exitoso "
+          echo "Reiniciando servidor simulado..."
+          echo "Despliegue completado correctamente."
