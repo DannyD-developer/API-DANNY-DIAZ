@@ -83,4 +83,4 @@ La API ofrece los siguientes endpoints para la gestión de profesores:
 | DELETE | `/api/teachers/:id` | Elimina un profesor del sistema. | Sí |
 
 ### **Autenticación**
-Todos los endpoints requieren autenticación básica:  
+Todos los endpoints requieren autenticación básica: admin 1234
