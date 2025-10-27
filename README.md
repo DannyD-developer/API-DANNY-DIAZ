@@ -1,222 +1,138 @@
-API RESTful para Gestión de Teachers
-Descripción General
+# **API para Gestión de Teachers**
 
-Esta API está desarrollada con Node.js y Express.js para gestionar información de profesores (Teachers).
-El proyecto sigue buenas prácticas de desarrollo backend, incluyendo autenticación, pruebas automatizadas y un flujo de CI/CD con GitHub Actions.
+## **Descripción del Proyecto**
 
-Características principales:
+Este proyecto consiste en una **API RESTful** desarrollada con **Node.js** y **Express.js**, cuyo objetivo es permitir la gestión de información de profesores (teachers).  
+El proyecto está diseñado para demostrar la correcta implementación de buenas prácticas de desarrollo backend, incluyendo:
 
-CRUD completo para profesores: crear, leer, actualizar y eliminar.
+- **Seguridad** mediante autenticación básica.  
+- **Pruebas automatizadas** para asegurar la calidad del código.  
+- **Integración y Despliegue Continuos (CI/CD)** con GitHub Actions para automatizar el flujo de desarrollo.  
 
-Seguridad mediante autenticación básica.
+La API permite realizar operaciones CRUD (Crear, Leer, Actualizar y Eliminar) sobre el recurso **Teacher**, manteniendo la modularidad y escalabilidad del proyecto.  
+Se enfoca en la separación de responsabilidades y la organización del código, lo que facilita su mantenimiento y futuras expansiones.
 
-Pruebas unitarias e integración con Jest y Supertest.
+---
 
-Integración continua y despliegue automatizado.
+## **Alcance y Objetivos**
 
-Código modular y escalable siguiendo el patrón MVC simplificado.
+### **Objetivo General**
+El objetivo principal es desarrollar una API funcional, segura y escalable que permita la gestión completa de profesores, asegurando la autenticación de usuarios y la correcta ejecución de pruebas automatizadas antes de cualquier despliegue.
 
-Objetivos
-General
+### **Objetivos Específicos**
+- Implementar una **arquitectura modular y escalable**, separando rutas, middlewares, modelos y controladores para mejorar la mantenibilidad.  
+- Incorporar **autenticación básica** para proteger los endpoints y evitar accesos no autorizados.  
+- Configurar **pruebas automatizadas** usando Jest y Supertest para validar el comportamiento esperado de cada endpoint.  
+- Establecer un **flujo de CI/CD** con GitHub Actions que garantice la integración continua y la entrega controlada de cambios.  
+- Documentar de manera **técnica y profesional** todo el desarrollo de la API, incluyendo ejemplos, instrucciones de ejecución y diagramas de flujo.
 
-Desarrollar una API RESTful funcional, segura y escalable para la gestión de profesores, asegurando la correcta autenticación y la ejecución de pruebas antes de cualquier despliegue.
+---
 
-Específicos
+## **Arquitectura del Proyecto**
 
-Implementar arquitectura modular y escalable.
+### **Patrón de Arquitectura**
+Se utiliza un patrón **MVC (Model-View-Controller) simplificado**, que permite organizar el proyecto en capas bien definidas y con responsabilidades separadas:
 
-Proteger los endpoints con autenticación básica.
+- **Rutas (`routes/`)**: Contienen la definición de los endpoints de la API y los métodos HTTP asociados.  
+- **Middlewares (`middlewares/`)**: Implementan funciones intermedias como la **autenticación**, validación de datos y manejo de errores.  
+- **Pruebas (`api.test.js`)**: Se encargan de realizar **tests automatizados** que verifican el comportamiento correcto de la API.  
+- **Archivo principal (`index.js`)**: Inicializa el servidor, configura los middlewares y enlaza las rutas.  
+- **Pipeline CI/CD (`.github/workflows/nodejs.yml`)**: Define las etapas de integración, pruebas y despliegue automatizado.
 
-Configurar pruebas automatizadas para todos los endpoints.
+Esta arquitectura facilita la **extensibilidad**, permitiendo agregar nuevas funcionalidades sin afectar el código existente.
 
-Automatizar el flujo de desarrollo mediante CI/CD.
+---
 
-Documentar de manera profesional, incluyendo ejemplos de request/responses y diagramas.
+## **Tecnologías Utilizadas**
 
-Arquitectura del Proyecto
+La API se desarrolla utilizando tecnologías modernas que garantizan eficiencia, escalabilidad y seguridad:
 
-Se sigue un patrón MVC simplificado:
+| Categoría | Herramienta o Librería | Descripción |
+|------------|------------------------|-------------|
+| Lenguaje de programación | JavaScript (Node.js) | Plataforma para ejecutar código JavaScript en el servidor. |
+| Framework | Express.js | Framework minimalista para construir aplicaciones web y APIs RESTful. |
+| Pruebas automatizadas | Jest, Supertest | Permiten realizar pruebas unitarias y de integración de los endpoints. |
+| Control de versiones | Git / GitHub | Gestión del código fuente y colaboración entre desarrolladores. |
+| Integración y despliegue | GitHub Actions | Automatización del flujo de trabajo para pruebas y despliegue continuo. |
+| Autenticación | Basic Authentication personalizada | Seguridad de acceso a los endpoints mediante usuario y contraseña codificados en Base64. |
 
-Carpeta / Archivo	Función
-routes/	Define endpoints y métodos HTTP.
-middlewares/	Funciones intermedias: autenticación, validación de datos y manejo de errores.
-controllers/	Lógica de negocio para cada recurso.
-models/	Modelos de datos (estructura de los profesores).
-tests/	Pruebas unitarias e integración.
-index.js	Inicializa el servidor y enlaza rutas y middlewares.
-.github/workflows/nodejs.yml	Pipeline CI/CD para integración y despliegue.
+---
 
-Esta arquitectura permite extender funcionalidades sin modificar el código existente.
+## **Seguridad y Buenas Prácticas**
 
-Tecnologías Utilizadas
-Categoría	Herramienta	Descripción
-Lenguaje	JavaScript (Node.js)	Plataforma backend para ejecutar JS en servidor.
-Framework	Express.js	Construcción de APIs RESTful.
-Pruebas	Jest, Supertest	Pruebas unitarias e integración de endpoints.
-Control de versiones	Git / GitHub	Gestión de código y colaboración.
-CI/CD	GitHub Actions	Automatización de pruebas e integración.
-Autenticación	Basic Authentication	Seguridad mediante usuario y contraseña en Base64.
-Seguridad y Buenas Prácticas
+Para garantizar la **seguridad y confiabilidad** de la API, se implementaron las siguientes prácticas:
 
-Autenticación básica en todos los endpoints.
+- **Autenticación básica** mediante middleware, protegiendo todos los endpoints.  
+- **Validación de datos** recibidos en las solicitudes para evitar inconsistencias o ataques de inyección.  
+- **Manejo de errores controlado**, devolviendo códigos HTTP estandarizados según la situación (200, 400, 404, 500).  
+- **Dependencias actualizadas** para evitar vulnerabilidades conocidas.  
+- **Pruebas automatizadas** antes de cada despliegue para asegurar que los cambios no rompan funcionalidades existentes.  
 
-Validación de datos para prevenir errores e inyecciones.
+---
 
-Manejo de errores estandarizado con códigos HTTP: 200, 400, 404, 500.
+## **Endpoints Principales**
 
-Dependencias actualizadas para evitar vulnerabilidades.
+La API ofrece los siguientes endpoints para la gestión de profesores:
 
-Pruebas automatizadas para garantizar estabilidad en cada despliegue.
+| Método | Ruta | Descripción | Autenticación |
+|--------|------|--------------|---------------|
+| GET | `/api/teachers` | Obtiene todos los profesores registrados. | Sí |
+| GET | `/api/teachers/:id` | Obtiene la información de un profesor específico mediante su ID. | Sí |
+| POST | `/api/teachers` | Permite crear un nuevo profesor en el sistema. | Sí |
+| PUT | `/api/teachers/:id` | Actualiza la información de un profesor existente. | Sí |
+| DELETE | `/api/teachers/:id` | Elimina un profesor del sistema. | Sí |
 
-Separación de responsabilidades para mantener código limpio y escalable.
+### **Autenticación**
+Todos los endpoints requieren autenticación básica:  
+admin 1234
 
-Endpoints
-GET /api/teachers
+## **Pruebas Automatizadas**
 
-Obtiene todos los profesores.
+Se utilizan **Jest** y **Supertest** para garantizar la correcta funcionalidad de los endpoints.  
+Estas pruebas permiten detectar errores de manera temprana y asegurar la estabilidad de la API durante el desarrollo.
 
-Request:
-
-GET /api/teachers
-Authorization: Basic YWRtaW46MTIzNA==
-
-
-Response (200 OK):
-
-[
-  { "id": 1, "name": "Danny", "age": 25, "enroll": true },
-  { "id": 2, "name": "Laura", "age": 30, "enroll": false }
-]
-
-GET /api/teachers/:id
-
-Obtiene información de un profesor específico por ID.
-
-Request:
-
-GET /api/teachers/1
-Authorization: Basic YWRtaW46MTIzNA==
-
-
-Response (200 OK):
-
-{ "id": 1, "name": "Danny", "age": 25, "enroll": true }
-
-
-Error 404 (si no existe):
-
-{ "error": "Teacher no encontrado" }
-
-POST /api/teachers
-
-Crea un nuevo profesor.
-
-Request:
-
-POST /api/teachers
-Authorization: Basic YWRtaW46MTIzNA==
-Content-Type: application/json
-
-{
-  "name": "Miguel",
-  "age": 28,
-  "enroll": true
-}
-
-
-Response (200 OK):
-
-{ "id": 3, "name": "Miguel", "age": 28, "enroll": true }
-
-
-Error 400 (datos incompletos):
-
-{ "error": "Datos del teacher incompletos" }
-
-PUT /api/teachers/:id
-
-Actualiza un profesor existente.
-
-Request:
-
-PUT /api/teachers/1
-Authorization: Basic YWRtaW46MTIzNA==
-Content-Type: application/json
-
-{
-  "name": "Daniel",
-  "age": 26,
-  "enroll": true
-}
-
-
-Response (200 OK):
-
-{ "id": 1, "name": "Daniel", "age": 26, "enroll": true }
-
-
-Error 404 (si no existe):
-
-{ "error": "Teacher no encontrado" }
-
-DELETE /api/teachers/:id
-
-Elimina un profesor.
-
-Request:
-
-DELETE /api/teachers/1
-Authorization: Basic YWRtaW46MTIzNA==
-
-
-Response (200 OK):
-
-{ "message": "Teacher eliminado correctamente" }
-
-
-Error 404 (si no existe):
-
-{ "error": "Teacher no encontrado" }
-
-Pruebas Automatizadas
-
-Se usa Jest y Supertest para asegurar que los endpoints funcionan correctamente.
-
-// tests/api.test.js
+### **Ejemplo de pruebas**
+```javascript
+// api.test.js
 const request = require('supertest');
-const app = require('../index');
+const express = require('express');
+const teachersRoutes = require('./routes/teachersroutes');
 
-describe('API Teachers', () => {
-  it('GET /api/teachers debe retornar un array', async () => {
+const app = express();
+app.use(express.json());
+app.use('/api/teachers', teachersRoutes);
+
+describe('Pruebas API Teachers', () => {
+  it('Debe obtener la lista de teachers (GET)', async () => {
     const res = await request(app).get('/api/teachers');
     expect(res.statusCode).toBe(200);
     expect(Array.isArray(res.body)).toBe(true);
   });
 
-  it('POST /api/teachers debe crear un nuevo teacher', async () => {
-    const newTeacher = { name: 'Dani', age: 25, enroll: true };
-    const res = await request(app).post('/api/teachers').send(newTeacher);
+  it('Debe agregar un nuevo teacher (POST)', async () => {
+    const newTeacher = { name: 'Danny', age: 25, enroll: true };
+    const res = await request(app)
+      .post('/api/teachers')
+      .send(newTeacher);
     expect(res.statusCode).toBe(200);
-    expect(res.body.name).toBe('Dani');
+    expect(res.body.name).toBe('Danny');
   });
 });
 
 
-Recomendación: Capturar los resultados de Postman para documentación:
+Pipeline CI/CD
 
-![Resultados de pruebas](./imagenes/tests_postman.png)
+La API cuenta con un flujo automatizado de integración y despliegue usando GitHub Actions:
 
-CI/CD con GitHub Actions
-Pipeline
+Etapas del pipeline
 
-Build: instalación de dependencias y ejecución de pruebas.
+Build: Instalación de dependencias y ejecución de pruebas automatizadas.
 
-Validación: asegurando que todas las pruebas pasen.
+Validación: Confirmación de que todas las pruebas pasaron correctamente.
 
-Deploy: simulación de despliegue local.
+Deploy: Simulación de despliegue local de la API en caso de éxito.
 
-Archivo de configuración:
-
+Archivo de configuración
 name: Node.js CI/CD Pipeline
 
 on:
@@ -227,58 +143,39 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - name: Checkout del código
+        uses: actions/checkout@v3
+      - name: Configurar Node.js
+        uses: actions/setup-node@v3
         with:
           node-version: 18
-      - run: npm install
-      - run: npm test
+      - name: Instalar dependencias
+        run: npm install
+      - name: Ejecutar pruebas
+        run: npm test
 
   deploy:
     needs: build
     runs-on: ubuntu-latest
     if: success()
     steps:
-      - uses: actions/checkout@v3
-      - run: |
+      - name: Checkout del código
+        uses: actions/checkout@v3
+      - name: Simular despliegue local
+        run: |
           echo "Iniciando despliegue simulado..."
           echo "Copiando archivos al entorno local..."
           echo "Despliegue exitoso"
 
+Visualización del pipeline
+![Pipeline CI/CD](./imagenes/pipeline_ci_cd.png)
 
-Diagrama CI/CD (Mermaid):
-
+Diagrama del flujo CI/CD
 flowchart TD
     A[Push a rama main] --> B[Checkout del código]
     B --> C[Configurar Node.js]
     C --> D[Instalar dependencias]
-    D --> E[Ejecutar pruebas]
+    D --> E[Ejecutar pruebas automatizadas]
     E --> F[Validación del pipeline]
     F --> G[Despliegue simulado]
     G --> H[Entrega local completada]
-
-Instalación y Ejecución Local
-git clone https://github.com/DannyD-developer/API-DANNY-DIAZ.git
-cd API-DANNY-DIAZ
-npm install
-npm start
-
-
-La API estará disponible en:
-
-http://localhost:3000
-
-Seguridad Recomendada
-
-Cambiar usuario y contraseña predeterminados (admin:1234) en producción.
-
-Usar HTTPS para cifrar la comunicación.
-
-Limitar intentos de login para prevenir ataques de fuerza bruta.
-
-Validar y sanitizar datos de entrada.
-
-Autoría
-
-Danny Díaz – Estudiante de Ingeniería de Software, Colombia
-GitHub: DannyD-developer
