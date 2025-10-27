@@ -127,9 +127,6 @@ bash
 Copy code
 npm start
 
-## Ejecucion
-http://localhost:3000
-
 ## Autoria
 Autor
 Danny Díaz
