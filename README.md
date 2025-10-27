@@ -119,8 +119,10 @@ Deploy: Simulación de despliegue local de la API en caso de éxito.
 ![POSTMAN EJEMPLO](imagenes/postman4.jpg)
 ## GET DESPUES DEL POST
 ![POSTMAN EJEMPLO](imagenes/postman5.jpg)
-
-
+## METODO DELETE
+![POSTMAN EJEMPLO](imagenes/postman6.jpg)
+## METODO DELETE DESPUES
+![POSTMAN EJEMPLO](imagenes/postman7.jpg)
 
 
 
@@ -128,8 +130,9 @@ Deploy: Simulación de despliegue local de la API en caso de éxito.
 
 
 ## **AUTORIA**
-Autor: Danny Diaz
-GITHUB
+Autor: Danny Santiago Diaz Hernandez
+Ingeniero de software
+Manuela Beltran
 
 ### **CONCLUSION**
 
