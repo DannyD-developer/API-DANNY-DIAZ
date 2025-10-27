@@ -106,22 +106,6 @@ Deploy: Simulación de despliegue local de la API en caso de éxito.
 
 ![API EJEMPLO](imagenes/pipeline.jpg)
 
-## CI/CD - Integración y Despliegue Continuo
-
-Cada push a la rama main dispara el pipeline automatizado:
-
-```mermaid
-flowchart TD
-    A[Push a rama main] --> B[Checkout del código]
-    B --> C[Configurar Node.js]
-    C --> D[Instalar dependencias]
-    D --> E[Ejecutar pruebas automatizadas]
-    E --> F{¿Todas las pruebas pasaron?}
-    F -->|Sí| G[Validación exitosa]
-    F -->|No| H[Detener pipeline y reportar error]
-    G --> I[Despliegue simulado / producción]
-    I --> J[Entrega completada]
-
 
 ---
 ## **Pruebas Postman**
@@ -141,6 +125,21 @@ flowchart TD
 ## METODO DELETE DESPUES
 ![POSTMAN EJEMPLO](imagenes/postman7.jpg)
 
+## CI/CD - Integración y Despliegue Continuo
+
+Cada push a la rama main dispara el pipeline automatizado:
+
+```mermaid
+flowchart TD
+    A[Push a rama main] --> B[Checkout del código]
+    B --> C[Configurar Node.js]
+    C --> D[Instalar dependencias]
+    D --> E[Ejecutar pruebas automatizadas]
+    E --> F{¿Todas las pruebas pasaron?}
+    F -->|Sí| G[Validación exitosa]
+    F -->|No| H[Detener pipeline y reportar error]
+    G --> I[Despliegue simulado / producción]
+    I --> J[Entrega completada]
 
 
 ---
