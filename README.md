@@ -118,9 +118,6 @@ describe('Pruebas API Teachers', () => {
     expect(res.body.name).toBe('Danny');
   });
 });
-<img width="754" height="391" alt="image" src="https://github.com/user-attachments/assets/ea020ef8-a353-416e-b592-bf10e41b58af" />
-
-
 
 ##Etapas Del PiPeline
 
