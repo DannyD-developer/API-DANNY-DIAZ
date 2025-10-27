@@ -1,149 +1,86 @@
-# API para Gestión de Teachers
+# **API para Gestión de Teachers**
 
-## Descripción del Proyecto
+## **Descripción del Proyecto**
 
-Este proyecto consiste en una **API restful** desarrollada con **Node.js** y **Express.js**, cuyo objetivo es permitir la gestión de información de profesores (teachers).  
-La aplicación implementa autenticación básica, pruebas automatizadas y un flujo de **Integración y Despliegue Continuos (CI/CD)** mediante **GitHub Actions**.
+Este proyecto consiste en una **API RESTful** desarrollada con **Node.js** y **Express.js**, cuyo objetivo es permitir la gestión de información de profesores (teachers).  
+El proyecto está diseñado para demostrar la correcta implementación de buenas prácticas de desarrollo backend, incluyendo:
 
-El propósito es demostrar la correcta aplicación de buenas prácticas de desarrollo backend, enfocadas en modularidad, seguridad, calidad de código y automatización del flujo de trabajo.
+- **Seguridad** mediante autenticación básica.  
+- **Pruebas automatizadas** para asegurar la calidad del código.  
+- **Integración y Despliegue Continuos (CI/CD)** con GitHub Actions para automatizar el flujo de desarrollo.  
 
----
-
-## Alcance y Objetivos
-
-### Objetivo General
-Desarrollar una API funcional que implemente operaciones CRUD (Create, Read, Update, Delete) sobre el recurso **Teacher**, garantizando autenticación, pruebas y despliegue automatizado.
-
-### Objetivos Específicos
-- Implementar una arquitectura modular y escalable.  
-- Incorporar autenticación básica para proteger los endpoints.  
-- Configurar pruebas automatizadas con Jest y Supertest.  
-- Establecer un flujo de CI/CD utilizando GitHub Actions.  
-- Documentar de forma técnica el desarrollo y funcionamiento de la API.
+La API permite realizar operaciones CRUD (Crear, Leer, Actualizar y Eliminar) sobre el recurso **Teacher**, manteniendo la modularidad y escalabilidad del proyecto.  
+Se enfoca en la separación de responsabilidades y la organización del código, lo que facilita su mantenimiento y futuras expansiones.
 
 ---
 
-## Arquitectura del Proyecto
+## **Alcance y Objetivos**
 
-### Patrón de Arquitectura
-Se utilizó un modelo **MVC (Model-View-Controller) simplificado**, que permite una separación clara de responsabilidades:
+### **Objetivo General**
+El objetivo principal es desarrollar una API funcional, segura y escalable que permita la gestión completa de profesores, asegurando la autenticación de usuarios y la correcta ejecución de pruebas automatizadas antes de cualquier despliegue.
 
-- **Rutas (`routes/`)**: Definen los endpoints de la API.  
-- **Middlewares (`middlewares/`)**: Contienen la lógica de autenticación.  
-- **Pruebas (`api.test.js`)**: Ejecutan verificaciones automáticas de funcionalidad.  
-- **Archivo principal (`index.js`)**: Configura el servidor y los componentes principales.  
-- **Pipeline CI/CD (`.github/workflows/nodejs.yml`)**: Define el flujo automatizado de integración y despliegue.
-
-
-## Tecnologías Utilizadas
-
-| Categoría | Herramienta o Librería |
-|------------|------------------------|
-| Lenguaje de programación | JavaScript (Node.js) |
-| Framework | Express.js |
-| Pruebas automatizadas | Jest, Supertest |
-| Control de versiones | Git / GitHub |
-| Integración y despliegue | GitHub Actions |
-| Autenticación | Basic Authentication personalizada |
+### **Objetivos Específicos**
+- Implementar una **arquitectura modular y escalable**, separando rutas, middlewares, modelos y controladores para mejorar la mantenibilidad.  
+- Incorporar **autenticación básica** para proteger los endpoints y evitar accesos no autorizados.  
+- Configurar **pruebas automatizadas** usando Jest y Supertest para validar el comportamiento esperado de cada endpoint.  
+- Establecer un **flujo de CI/CD** con GitHub Actions que garantice la integración continua y la entrega controlada de cambios.  
+- Documentar de manera **técnica y profesional** todo el desarrollo de la API, incluyendo ejemplos, instrucciones de ejecución y diagramas de flujo.
 
 ---
 
-## Seguridad y Buenas Prácticas
+## **Arquitectura del Proyecto**
 
-- Autenticación básica mediante middleware (`middlewares/auth.js`).  
-- Validación y manejo controlado de errores.  
-- Uso de códigos de estado HTTP estandarizados.  
-- Dependencias actualizadas.  
-- Ejecución de pruebas automatizadas antes de cada despliegue.  
+### **Patrón de Arquitectura**
+Se utiliza un patrón **MVC (Model-View-Controller) simplificado**, que permite organizar el proyecto en capas bien definidas y con responsabilidades separadas:
+
+- **Rutas (`routes/`)**: Contienen la definición de los endpoints de la API y los métodos HTTP asociados.  
+- **Middlewares (`middlewares/`)**: Implementan funciones intermedias como la **autenticación**, validación de datos y manejo de errores.  
+- **Pruebas (`api.test.js`)**: Se encargan de realizar **tests automatizados** que verifican el comportamiento correcto de la API.  
+- **Archivo principal (`index.js`)**: Inicializa el servidor, configura los middlewares y enlaza las rutas.  
+- **Pipeline CI/CD (`.github/workflows/nodejs.yml`)**: Define las etapas de integración, pruebas y despliegue automatizado.
+
+Esta arquitectura facilita la **extensibilidad**, permitiendo agregar nuevas funcionalidades sin afectar el código existente.
 
 ---
 
-## Endpoints Principales
+## **Tecnologías Utilizadas**
+
+La API se desarrolla utilizando tecnologías modernas que garantizan eficiencia, escalabilidad y seguridad:
+
+| Categoría | Herramienta o Librería | Descripción |
+|------------|------------------------|-------------|
+| Lenguaje de programación | JavaScript (Node.js) | Plataforma para ejecutar código JavaScript en el servidor. |
+| Framework | Express.js | Framework minimalista para construir aplicaciones web y APIs RESTful. |
+| Pruebas automatizadas | Jest, Supertest | Permiten realizar pruebas unitarias y de integración de los endpoints. |
+| Control de versiones | Git / GitHub | Gestión del código fuente y colaboración entre desarrolladores. |
+| Integración y despliegue | GitHub Actions | Automatización del flujo de trabajo para pruebas y despliegue continuo. |
+| Autenticación | Basic Authentication personalizada | Seguridad de acceso a los endpoints mediante usuario y contraseña codificados en Base64. |
+
+---
+
+## **Seguridad y Buenas Prácticas**
+
+Para garantizar la **seguridad y confiabilidad** de la API, se implementaron las siguientes prácticas:
+
+- **Autenticación básica** mediante middleware, protegiendo todos los endpoints.  
+- **Validación de datos** recibidos en las solicitudes para evitar inconsistencias o ataques de inyección.  
+- **Manejo de errores controlado**, devolviendo códigos HTTP estandarizados según la situación (200, 400, 404, 500).  
+- **Dependencias actualizadas** para evitar vulnerabilidades conocidas.  
+- **Pruebas automatizadas** antes de cada despliegue para asegurar que los cambios no rompan funcionalidades existentes.  
+
+---
+
+## **Endpoints Principales**
+
+La API ofrece los siguientes endpoints para la gestión de profesores:
 
 | Método | Ruta | Descripción | Autenticación |
 |--------|------|--------------|---------------|
-| GET | `/api/teachers` | Obtiene todos los profesores | Sí |
-| GET | `/api/teachers/:id` | Obtiene un profesor por ID | Sí |
-| POST | `/api/teachers` | Crea un nuevo profesor | Sí |
-| PUT | `/api/teachers/:id` | Actualiza la información de un profesor | Sí |
-| DELETE | `/api/teachers/:id` | Elimina un profesor existente | Sí |
+| GET | `/api/teachers` | Obtiene todos los profesores registrados. | Sí |
+| GET | `/api/teachers/:id` | Obtiene la información de un profesor específico mediante su ID. | Sí |
+| POST | `/api/teachers` | Permite crear un nuevo profesor en el sistema. | Sí |
+| PUT | `/api/teachers/:id` | Actualiza la información de un profesor existente. | Sí |
+| DELETE | `/api/teachers/:id` | Elimina un profesor del sistema. | Sí |
 
-### Autenticación
-(Usuario: `admin`, Contraseña: `1234`)
-
----
-
-## Pruebas Automatizadas
-
-Las pruebas se desarrollaron utilizando Jest y Supertest para validar el comportamiento de los endpoints.  
-Estas pruebas se ejecutan tanto de manera local como dentro del flujo de CI/CD definido en GitHub Actions.
-
-### Ejecución de pruebas localmente
-// api.test.js
-const request = require('supertest');
-const express = require('express');
-const teachersRoutes = require('./routes/teachersroutes');
-
-const app = express();
-app.use(express.json());
-app.use('/api/teachers', teachersRoutes);
-
-describe('Pruebas API Teachers', () => {
-  it('Debe obtener la lista de teachers (GET)', async () => {
-    const res = await request(app).get('/api/teachers');
-    expect(res.statusCode).toBe(200);
-    expect(Array.isArray(res.body)).toBe(true);
-  });
-
-  it('Debe agregar un nuevo teacher (POST)', async () => {
-    const newTeacher = { name: 'Danny', age: 25, enroll: true };
-    const res = await request(app)
-      .post('/api/teachers')
-      .send(newTeacher);
-    expect(res.statusCode).toBe(200);
-    expect(res.body.name).toBe('Danny');
-  });
-});
-
-          
-## Foto ci y cd
-
-
-## Diagrama del flujo
-
-
-## Instalacion y ejecucion local
-Clonar el repositorio
-bash
-Copy code
-git clone https://github.com/DannyD-developer/API-DANNY-DIAZ.git
-cd API-DANNY-DIAZ
-Instalar dependencias
-bash
-Copy code
-npm install
-Ejecutar el servidor
-bash
-Copy code
-npm start
-
-## Autoria
-Autor
-Danny Díaz
-Estudiante de Ingeniería de Software
-Colombia
-GitHub: DannyD-developer
-
-## Conclusion
-
-El proyecto cumple con los principios fundamentales del desarrollo backend moderno, garantizando:
-
-Estructura modular y mantenible.
-
-Implementación de autenticación segura.
-
-Automatización mediante un pipeline de CI/CD funcional.
-
-Pruebas unitarias exitosas.
-
-Documentación técnica completa y profesional.
+### **Autenticación**
+Todos los endpoints requieren autenticación básica:  
