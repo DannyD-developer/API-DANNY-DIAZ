@@ -120,11 +120,8 @@ describe('Pruebas API Teachers', () => {
 });
 
 
-Pipeline CI/CD
 
-La API cuenta con un flujo automatizado de integración y despliegue usando GitHub Actions:
-
-Etapas del pipeline
+##Etapas Del PiPeline
 
 Build: Instalación de dependencias y ejecución de pruebas automatizadas.
 
@@ -167,15 +164,6 @@ jobs:
           echo "Copiando archivos al entorno local..."
           echo "Despliegue exitoso"
 
-Visualización del pipeline
-![Pipeline CI/CD](./imagenes/pipeline_ci_cd.png)
 
-Diagrama del flujo CI/CD
-flowchart TD
-    A[Push a rama main] --> B[Checkout del código]
-    B --> C[Configurar Node.js]
-    C --> D[Instalar dependencias]
-    D --> E[Ejecutar pruebas automatizadas]
-    E --> F[Validación del pipeline]
-    F --> G[Despliegue simulado]
-    G --> H[Entrega local completada]
+
+
