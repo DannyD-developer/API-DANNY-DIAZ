@@ -1,4 +1,4 @@
-# API RESTful para Gestión de Teachers
+# API para Gestión de Teachers
 
 ## Descripción del Proyecto
 
