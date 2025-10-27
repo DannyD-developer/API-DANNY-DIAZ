@@ -92,7 +92,7 @@ Se utilizan **Jest** y **Supertest** para garantizar la correcta funcionalidad d
 Estas pruebas permiten detectar errores de manera temprana y asegurar la estabilidad de la API durante el desarrollo.
 
 ### **Ejemplo de pruebas**
-![API EJEMPLO](/imagenes/apitest)
+![API EJEMPLO](imagenes/apitest.jpg)
 
 
 ##Etapas Del PiPeline
