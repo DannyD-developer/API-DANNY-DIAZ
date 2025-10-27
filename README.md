@@ -127,35 +127,7 @@ Deploy: Simulación de despliegue local de la API en caso de éxito.
 
 ## CI/CD - Integración y Despliegue Continuo
 
-Cada push a la rama main dispara el siguiente flujo:
-
-Push a main
-   │
-   ▼
-Checkout del código
-   │
-   ▼
-Configurar Node.js
-   │
-   ▼
-Instalar dependencias
-   │
-   ▼
-Ejecutar pruebas automatizadas
-   │
-   ▼
-¿Todas las pruebas pasaron?
-   ├── Sí ──► Validación exitosa
-   │              │
-   │              ▼
-   │        Despliegue simulado / producción
-   │              │
-   │              ▼
-   │        Entrega completada
-   │
-   └── No ──► Detener pipeline y reportar error
-
-
+![MAPA](imagenes/integracion.jpg)
 
 ---
 
