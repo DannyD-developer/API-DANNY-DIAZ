@@ -75,7 +75,7 @@ Se utilizó un modelo **MVC (Model-View-Controller) simplificado**, que permite 
 
 ## Pruebas Automatizadas
 
-Las pruebas se desarrollaron utilizando **Jest** y **Supertest** para validar el comportamiento de los endpoints.  
+Las pruebas se desarrollaron utilizando Jest y Supertest para validar el comportamiento de los endpoints.  
 Estas pruebas se ejecutan tanto de manera local como dentro del flujo de CI/CD definido en GitHub Actions.
 
 ### Ejecución de pruebas localmente
@@ -155,30 +155,18 @@ bash
 Copy code
 npm start
 
-##El servidor se ejecutará en:
+##EJECUCION
 http://localhost:3000
 
-##Documentación del Flujo CI/CD
-El proceso de automatización se ejecuta cada vez que se realiza un push a la rama main.
-El flujo incluye las siguientes etapas:
-
-Build: Instalación de dependencias y ejecución de pruebas.
-
-Validación: Verificación del estado del pipeline.
-
-Despliegue: Simulación de entrega local en caso de éxito.
-
-
-
-##Autoria
-
+##AUTORIA
 Autor
 Danny Díaz
 Estudiante de Ingeniería de Software
 Colombia
 GitHub: DannyD-developer
 
-##**Conclusión**
+##CONCLUSION
+
 El proyecto cumple con los principios fundamentales del desarrollo backend moderno, garantizando:
 
 Estructura modular y mantenible.
