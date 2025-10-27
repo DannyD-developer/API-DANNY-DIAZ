@@ -133,33 +133,14 @@ jobs:
           echo "Iniciando despliegue simulado..."
           echo "Copiando archivos al entorno local..."
           echo "Despliegue exitoso"
-Espacio para incluir captura del pipeline exitoso:
+          
+## Foto ci y cd
 
-scss
-Copy code
-![Pipeline CI/CD](./imagenes/pipeline_ci_cd.png)
-Diagrama del flujo CI/CD
-mermaid
-Copy code
-flowchart TD
-    A[Push a rama main] --> B[Checkout del código]
-    B --> C[Configurar Node.js]
-    C --> D[Instalar dependencias]
-    D --> E[Ejecutar pruebas automatizadas]
-    E --> F[Validación del pipeline]
-    F --> G[Despliegue simulado]
-    G --> H[Entrega local completada]
 
-    %% Estilo uniforme para todos los cuadros
-    style A fill:#f0f0f0,stroke:#333,stroke-width:2px
-    style B fill:#f0f0f0,stroke:#333,stroke-width:2px
-    style C fill:#f0f0f0,stroke:#333,stroke-width:2px
-    style D fill:#f0f0f0,stroke:#333,stroke-width:2px
-    style E fill:#f0f0f0,stroke:#333,stroke-width:2px
-    style F fill:#f0f0f0,stroke:#333,stroke-width:2px
-    style G fill:#f0f0f0,stroke:#333,stroke-width:2px
-    style H fill:#f0f0f0,stroke:#333,stroke-width:2px
-Instalación y Ejecución Local
+##Diagrama del flujo 
+
+
+##Instalación y Ejecución Local
 Clonar el repositorio
 bash
 Copy code
@@ -173,12 +154,11 @@ Ejecutar el servidor
 bash
 Copy code
 npm start
-El servidor se ejecutará en:
 
-arduino
-Copy code
+##El servidor se ejecutará en:
 http://localhost:3000
-Documentación del Flujo CI/CD
+
+##Documentación del Flujo CI/CD
 El proceso de automatización se ejecuta cada vez que se realiza un push a la rama main.
 El flujo incluye las siguientes etapas:
 
@@ -188,18 +168,17 @@ Validación: Verificación del estado del pipeline.
 
 Despliegue: Simulación de entrega local en caso de éxito.
 
-Espacio para incluir un diagrama del flujo CI/CD:
 
-scss
-Copy code
-![Flujo CI/CD](./imagenes/flujo_ci_cd.png)
+
+##Autoria
+
 Autor
 Danny Díaz
 Estudiante de Ingeniería de Software
 Colombia
 GitHub: DannyD-developer
 
-Conclusión
+##Conclusión
 El proyecto cumple con los principios fundamentales del desarrollo backend moderno, garantizando:
 
 Estructura modular y mantenible.
