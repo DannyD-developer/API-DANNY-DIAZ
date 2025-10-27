@@ -1,29 +1,41 @@
-name: Node.js CI
+name: Node.js CI/CD Pipeline
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ main ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ main ]
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - name:  Checkout del código
+        uses: actions/checkout@v3
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - name:  Configurar Node.js
+        uses: actions/setup-node@v3
         with:
-          node-version: 20
+          node-version: 18
 
-      - name: Install dependencies
+      - name:  Instalar dependencias
         run: npm install
 
-      - name: Fix Jest permissions
-        run: chmod +x ./node_modules/.bin/jest
+      - name:  Ejecutar pruebas
+        run: npm test
 
-      - name: Run tests
-        run: npx jest --runInBand
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    if: success()
+
+    steps:
+      - name:  Checkout del código
+        uses: actions/checkout@v3
+
+      - name:  Simular despliegue local
+        run: 
+          echo "Iniciando despliegue simulado..."
+          echo "Copiando archivos al entorno local (simulación)..."
+          echo "Despliegue exitoso "
