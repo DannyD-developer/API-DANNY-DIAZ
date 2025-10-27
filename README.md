@@ -2,7 +2,7 @@
 
 ## Descripción del Proyecto
 
-Este proyecto consiste en una **API RESTful** desarrollada con **Node.js** y **Express.js**, cuyo objetivo es permitir la gestión de información de profesores (teachers).  
+Este proyecto consiste en una **API restful** desarrollada con **Node.js** y **Express.js**, cuyo objetivo es permitir la gestión de información de profesores (teachers).  
 La aplicación implementa autenticación básica, pruebas automatizadas y un flujo de **Integración y Despliegue Continuos (CI/CD)** mediante **GitHub Actions**.
 
 El propósito es demostrar la correcta aplicación de buenas prácticas de desarrollo backend, enfocadas en modularidad, seguridad, calidad de código y automatización del flujo de trabajo.
