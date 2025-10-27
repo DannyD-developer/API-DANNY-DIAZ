@@ -34,25 +34,6 @@ Se utilizó un modelo **MVC (Model-View-Controller) simplificado**, que permite 
 - **Archivo principal (`index.js`)**: Configura el servidor y los componentes principales.  
 - **Pipeline CI/CD (`.github/workflows/nodejs.yml`)**: Define el flujo automatizado de integración y despliegue.
 
-### Estructura del Repositorio
-API-DANNY-DIAZ
-├── .github
-│ └── workflows
-│ └── nodejs.yml
-├── middlewares
-│ └── auth.js
-├── routes
-│ └── teachersroutes.js
-├── api.test.js
-├── index.js
-├── package.json
-├── package-lock.json
-└── README.md
-
-yaml
-Copy code
-
----
 
 ## Tecnologías Utilizadas
 
