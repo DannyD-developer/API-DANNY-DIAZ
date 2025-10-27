@@ -84,8 +84,8 @@ La API ofrece los siguientes endpoints para la gestión de profesores:
 
 ### **Autenticación**
 Todos los endpoints requieren autenticación básica:  
-admin 
-1234
+**admin** 
+**1234**
 
 ## **Pruebas Automatizadas**
 
