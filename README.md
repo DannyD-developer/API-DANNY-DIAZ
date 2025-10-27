@@ -130,9 +130,9 @@ Deploy: Simulación de despliegue local de la API en caso de éxito.
 
 
 ## **AUTORIA**
-Autor: Danny Santiago Diaz Hernandez
-Ingeniero de software
-Manuela Beltran
+Autor: Danny Santiago Diaz Hernandez.
+Ingeniero de software.
+Manuela Beltran.
 
 ### **CONCLUSION**
 
