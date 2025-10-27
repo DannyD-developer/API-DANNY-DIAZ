@@ -105,9 +105,21 @@ Deploy: Simulación de despliegue local de la API en caso de éxito.
 
 ![API EJEMPLO](imagenes/pipeline.jpg)
 
-## **Pruebas Automatizadas**
+## **AUTORIA**
+Autor: Danny Diaz
+GITHUB
 
+### **CONCLUSION**
 
+Código modular y escalable.
+
+Implementación de autenticación segura en todos los endpoints.
+
+Automatización del flujo de desarrollo mediante CI/CD.
+
+Pruebas unitarias y de integración exitosas.
+
+Documentación técnica completa y clara, facilitando la comprensión y mantenimiento del proyecto.
 
 
 
