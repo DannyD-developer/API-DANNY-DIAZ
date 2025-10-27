@@ -103,41 +103,7 @@ Validación: Confirmación de que todas las pruebas pasaron correctamente.
 
 Deploy: Simulación de despliegue local de la API en caso de éxito.
 
-Archivo de configuración
-name: Node.js CI/CD Pipeline
-
-on:
-  push:
-    branches: [ main ]
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout del código
-        uses: actions/checkout@v3
-      - name: Configurar Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: 18
-      - name: Instalar dependencias
-        run: npm install
-      - name: Ejecutar pruebas
-        run: npm test
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    if: success()
-    steps:
-      - name: Checkout del código
-        uses: actions/checkout@v3
-      - name: Simular despliegue local
-        run: |
-          echo "Iniciando despliegue simulado..."
-          echo "Copiando archivos al entorno local..."
-          echo "Despliegue exitoso"
-
+![API EJEMPLO](imagenes/pipeline.jpg)
 
 ## **Pruebas Automatizadas**
 
