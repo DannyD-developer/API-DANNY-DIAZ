@@ -68,13 +68,8 @@ Se utilizó un modelo **MVC (Model-View-Controller) simplificado**, que permite 
 | PUT | `/api/teachers/:id` | Actualiza la información de un profesor | Sí |
 | DELETE | `/api/teachers/:id` | Elimina un profesor existente | Sí |
 
-### Ejemplo de Autenticación
-Encabezado HTTP requerido:  
-Authorization: Basic YWRtaW46MTIzNDU=
-
-yaml
-Copy code
-(Usuario: `admin`, Contraseña: `12345`)
+### Autenticación
+(Usuario: `admin`, Contraseña: `1234`)
 
 ---
 
