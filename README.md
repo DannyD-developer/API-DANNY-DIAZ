@@ -104,13 +104,13 @@ Validación: Confirmación de que todas las pruebas pasaron correctamente.
 
 Deploy: Simulación de despliegue local de la API en caso de éxito.
 
-![API EJEMPLO](imagenes/pipeline.jpg
+![API EJEMPLO](imagenes/pipeline.jpg)
 
 ---
 ## **Pruebas Postman**
 
 ## METODO GET
-![POSTMAN EJEMPLO](imagenes/postman1.jpg)]
+![POSTMAN EJEMPLO](imagenes/postman1.jpg)
 ## METODO GET COMPLETA TABLA
 ![POSTMAN EJEMPLO](imagenes/postman2.jpg)
 ## AUTENTICACION
