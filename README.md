@@ -164,34 +164,14 @@ jobs:
           echo "Copiando archivos al entorno local..."
           echo "Despliegue exitoso"
 
-##Instalación y Ejecución Local
-Clonar el repositorio
-git clone https://github.com/DannyD-developer/API-DANNY-DIAZ.git
-cd API-DANNY-DIAZ
 
-Instalar dependencias
-npm install
+## **Pruebas Automatizadas**
 
-Ejecutar el servidor
-npm start
 
-##Autoría
 
-Autor: Danny Díaz
-Estudiante de Ingeniería de Software
-Colombia
-GitHub: DannyD-developer
 
-##Conclusión
 
-Este proyecto representa una implementación profesional de una API RESTful, cumpliendo con buenas prácticas de desarrollo backend:
 
-Código modular y escalable.
 
-Implementación de autenticación segura en todos los endpoints.
 
-Automatización del flujo de desarrollo mediante CI/CD.
 
-Pruebas unitarias y de integración exitosas.
-
-Documentación técnica completa y clara, facilitando la comprensión y mantenimiento del proyecto.
