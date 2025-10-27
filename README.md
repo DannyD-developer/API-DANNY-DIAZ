@@ -79,60 +79,32 @@ Las pruebas se desarrollaron utilizando Jest y Supertest para validar el comport
 Estas pruebas se ejecutan tanto de manera local como dentro del flujo de CI/CD definido en GitHub Actions.
 
 ### Ejecución de pruebas localmente
-```bash
-npm test
-Espacio para incluir imagen de pruebas en Postman o Jest:
+// api.test.js
+const request = require('supertest');
+const express = require('express');
+const teachersRoutes = require('./routes/teachersroutes');
 
-scss
-Copy code
-![Pruebas API](./imagenes/tests_postman.png)
-Pipeline CI/CD
-El flujo de Integración y Despliegue Continuos (CI/CD) está configurado mediante un archivo de GitHub Actions ubicado en:
+const app = express();
+app.use(express.json());
+app.use('/api/teachers', teachersRoutes);
 
-bash
-Copy code
-.github/workflows/nodejs.yml
-Etapas del pipeline
-Build: Instalación de dependencias y ejecución de pruebas automatizadas.
+describe('Pruebas API Teachers', () => {
+  it('Debe obtener la lista de teachers (GET)', async () => {
+    const res = await request(app).get('/api/teachers');
+    expect(res.statusCode).toBe(200);
+    expect(Array.isArray(res.body)).toBe(true);
+  });
 
-Deploy: Simulación de despliegue local tras una compilación exitosa.
+  it('Debe agregar un nuevo teacher (POST)', async () => {
+    const newTeacher = { name: 'Danny', age: 25, enroll: true };
+    const res = await request(app)
+      .post('/api/teachers')
+      .send(newTeacher);
+    expect(res.statusCode).toBe(200);
+    expect(res.body.name).toBe('Danny');
+  });
+});
 
-Contenido del workflow principal
-yaml
-Copy code
-name: Node.js CI/CD Pipeline
-
-on:
-  push:
-    branches: [ main ]
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout del código
-        uses: actions/checkout@v3
-      - name: Configurar Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: 18
-      - name: Instalar dependencias
-        run: npm install
-      - name: Ejecutar pruebas
-        run: npm test
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    if: success()
-    steps:
-      - name: Checkout del código
-        uses: actions/checkout@v3
-      - name: Simular despliegue local
-        run: |
-          echo "Iniciando despliegue simulado..."
-          echo "Copiando archivos al entorno local..."
-          echo "Despliegue exitoso"
           
 ## Foto ci y cd
 
