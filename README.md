@@ -109,10 +109,10 @@ describe('Pruebas API Teachers', () => {
 ## Foto ci y cd
 
 
-##Diagrama del flujo 
+## Diagrama del flujo
 
 
-##Instalación y Ejecución Local
+## Instalacion y ejecucion local
 Clonar el repositorio
 bash
 Copy code
@@ -127,17 +127,17 @@ bash
 Copy code
 npm start
 
-##EJECUCION
+## Ejecucion
 http://localhost:3000
 
-##AUTORIA
+## Autoria
 Autor
 Danny Díaz
 Estudiante de Ingeniería de Software
 Colombia
 GitHub: DannyD-developer
 
-##CONCLUSION
+## Conclusion
 
 El proyecto cumple con los principios fundamentales del desarrollo backend moderno, garantizando:
 
