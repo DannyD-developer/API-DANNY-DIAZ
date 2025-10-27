@@ -95,7 +95,7 @@ Estas pruebas permiten detectar errores de manera temprana y asegurar la estabil
 ![API EJEMPLO](imagenes/apitest.jpg)
 
 
-##Etapas Del PiPeline
+### **PIPELINE**
 
 Build: Instalación de dependencias y ejecución de pruebas automatizadas.
 
