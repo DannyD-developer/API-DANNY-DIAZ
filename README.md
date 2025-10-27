@@ -84,7 +84,8 @@ La API ofrece los siguientes endpoints para la gestión de profesores:
 
 ### **Autenticación**
 Todos los endpoints requieren autenticación básica:  
-admin 1234
+admin 
+1234
 
 ## **Pruebas Automatizadas**
 
@@ -103,7 +104,28 @@ Validación: Confirmación de que todas las pruebas pasaron correctamente.
 
 Deploy: Simulación de despliegue local de la API en caso de éxito.
 
-![API EJEMPLO](imagenes/pipeline.jpg)
+![API EJEMPLO](imagenes/pipeline.jpg
+
+---
+## **Pruebas Postman**
+
+## METODO GET
+![POSTMAN EJEMPLO](imagenes/postman1.jpg)]
+## METODO GET COMPLETA TABLA
+![POSTMAN EJEMPLO](imagenes/postman2.jpg)
+## AUTENTICACION
+![POSTMAN EJEMPLO](imagenes/postman3.jpg)
+## METODO POST
+![POSTMAN EJEMPLO](imagenes/postman4.jpg)
+## GET DESPUES DEL POST
+![POSTMAN EJEMPLO](imagenes/postman5.jpg)
+
+
+
+
+
+---
+
 
 ## **AUTORIA**
 Autor: Danny Diaz
